@@ -1,0 +1,23 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+
+datasource db {
+    provider = "postgresql"
+    url = env("DATABASE_URL")
+}
+
+model Trips{
+    id String @id @default(cuid())
+    location String
+    category String
+    startDate DateTime
+    endDate DateTime
+    people Int
+    budget Int
+    createdAt DateTime @default(now())
+    updatedAt DateTime @updatedAt
+    userId String
+    imageUrl String?
+}
