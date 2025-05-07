@@ -18,10 +18,6 @@ interface HeroProps {
       url: string;
     };
   };
-  image: {
-    src: string;
-    alt: string;
-  };
 }
 
 const Hero = async ({
@@ -37,10 +33,6 @@ const Hero = async ({
       text: "Learn More",
       url: "/plans",
     },
-  },
-  image = {
-    src: "https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-    alt: "image bg",
   },
 }: HeroProps) => {
   return (
@@ -75,7 +67,11 @@ const Hero = async ({
                 )}
               </div>
             </div>
-            <img src={image.src} alt={image.alt} className='max-h-96 w-full rounded-md object-cover' />
+            <img
+              src='https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
+              alt='image bg'
+              className='max-h-96 w-full rounded-md object-cover'
+            />
           </div>
         </div>
       </div>
